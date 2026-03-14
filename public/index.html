@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MEDIS Nova</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="topbar">
+    <div>
+      <h1>MEDIS Nova</h1>
+      <p>Advanced medical intelligence dashboard</p>
+    </div>
+    <span id="statusBadge" class="badge">Not logged in</span>
+  </header>
+
+  <main class="layout">
+    <section class="card">
+      <h2>Account</h2>
+      <div class="row3"><input id="name" placeholder="Name" /><input id="email" placeholder="Email" /><input id="password" type="password" placeholder="Password" /></div>
+      <div class="row3"><input id="dob" type="date" /><select id="gender"><option>male</option><option>female</option><option>other</option></select><select id="season"><option>summer</option><option>monsoon</option><option>winter</option></select></div>
+      <div class="row3"><button id="registerBtn">Register</button><button id="loginBtn">Login</button><button id="logoutBtn">Logout</button></div>
+      <pre id="authOut"></pre>
+    </section>
+
+    <section class="card">
+      <h2>Disease Prediction + Triage</h2>
+      <textarea id="symptoms" placeholder="Symptoms (comma separated): fever, cough, fatigue..."></textarea>
+      <div class="row2"><input id="symptomSearch" placeholder="Search symptom suggestions" /><button id="searchSymptomsBtn">Get Suggestions</button></div>
+      <pre id="symptomSuggestOut"></pre>
+      <button id="predictBtn">Generate Medical Report</button>
+      <pre id="predictOut"></pre>
+    </section>
+
+    <section class="card">
+      <h2>Vitals Risk Assessment (New)</h2>
+      <div class="row4">
+        <input id="heartRate" placeholder="Heart rate bpm" />
+        <input id="oxygen" placeholder="SpO2 %" />
+        <input id="systolicBP" placeholder="Systolic BP" />
+        <input id="temperatureC" placeholder="Temp °C" />
+      </div>
+      <button id="riskBtn">Assess Risk</button>
+      <pre id="riskOut"></pre>
+    </section>
+
+    <section class="card">
+      <h2>Profile Insights + Wellness Plan (New)</h2>
+      <div class="row2"><button id="profileBtn">Load Profile</button><button id="wellnessBtn">Generate Wellness Plan</button></div>
+      <pre id="profileOut"></pre>
+      <pre id="wellnessOut"></pre>
+    </section>
+
+    <section class="card">
+      <h2>Nearby Healthcare Finder</h2>
+      <div class="row4"><input id="lat" value="29.3919" /><input id="lng" value="79.4542" /><input id="radius" value="5" /><select id="type"><option value="all">all</option><option>hospital</option><option>clinic</option><option>pharmacy</option></select></div>
+      <button id="nearbyBtn">Find Facilities</button>
+      <pre id="nearbyOut"></pre>
+    </section>
+
+    <section class="card">
+      <h2>AI Medical Assistant</h2>
+      <textarea id="chatMsg" placeholder="Ask in English or Hindi"></textarea>
+      <button id="chatBtn">Send</button>
+      <pre id="chatOut"></pre>
+    </section>
+  </main>
+
+  <footer>For informational use only. In emergencies, contact emergency services immediately.</footer>
+  <script src="app.js"></script>
+</body>
+</html>
